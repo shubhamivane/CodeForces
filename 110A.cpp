@@ -1,25 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    unsigned long long int n, t;
+    long long int n;
+    int t;
     cin >> n;
-    bool flag = true;
     while(n){
         t = n % 10;
-        if(t == 7 || t == 4){
-            n /= 10;
-            continue;
+        if(t != 4 && t != 7){
+            cout << "NO" << endl;
+            return 0;
         }
-        else{
-            flag = false;
-            break;
-        }
+        n /= 10;
     }
-    if(flag){
-        cout << "YES" << endl;
-    }
-    else{
-        cout << "NO" << endl;
-    }
+    cout << "YES" << endl;
     return 0;
 }
